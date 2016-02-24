@@ -1,0 +1,149 @@
+{
+	"basics": {
+		"name": "Amit Shinde",
+		"label": "Software Engineer",
+		"picture": "https://goo.gl/N9q6jD",
+		"email": "shinde13amit@gmail.com",
+		"phone": "+81 70 2188 7813",
+		"website": "https://github.com/amiit-github",
+		"summary": "I am from India, interested in building systems, microservices for scalability, so that awesome products are always online on the internet.",
+		"location": {
+			"address": "",
+			"postalCode": "",
+			"city": "Tokyo",
+			"countryCode": "JP",
+			"region": "Japan"
+		},
+		"profiles": [
+			{
+				"network": "Linked In",
+				"username": "amit-shinde",
+				"url": "https://jp.linkedin.com/in/amit-shinde-6797b257"
+			},
+			{
+				"network": "Github",
+				"username": "amiit-github",
+				"url": "https://github.com/amiit-github"
+			}
+		]
+	},
+	"work": [
+		{
+			"company": "Rakuten Inc",
+			"position": "Software Engineer",
+			"website": "http://global.rakuten.com/corp/worldwide/",
+			"startDate": "[1.5 years] Oct 2014",
+			"endDate": "Present",
+			"summary": "Rakuten Inc. is largest ecommerce in Japan with variety of services in travel, finance, e-reading, entertainment, media etc. It has extended its ecommerce business amongst Asian, European and American marketplaces.",
+			"highlights": [
+				"Responsibilities includes creating features for merchants interface. ",
+				"Part of the team who develops and maintains Ruby on Rails application, used by sellers for inventory and order management.",
+				"Handle day-to-day operations related to batch servers and feature deployments.",
+				"Practicing agile methodologies among teams, embracing devops."
+			]
+		},
+		{
+			"company": "Viraltag",
+			"position": "Web development intern",
+			"website": "https://www.viraltag.com/",
+			"startDate": "[1.2 years] Aug 2013",
+			"endDate": "Sept 2014",
+			"summary": "Viraltag is scheduling tool for Pinterest, Instagram, Facebook, Twitter, Tumblr, & LinkedIn. ",
+			"highlights": [
+				"Worked on Zend PHP to create new features for the web application.",
+				"Developed analytics dashboard using Javascript chart libraries.",
+				"Made use of AWS API to automate various infrastructure level tasks."
+			]
+		},
+		{
+			"company": "Layer 3 Media",
+			"position": "Marketing tools intern",
+			"website": "http://www.layer3media.com/",
+			"startDate": "[5 months] Feb 2013",
+			"endDate": "June 2013",
+			"summary": "Layer3Media is a provider of streaming documentaries and regional movies in India through http://icinema.net",
+			"highlights": [
+				"Developed web application that consumed API's of Facebook, Twitter, Google Maps, to monitor the trends related to regional movies."
+			]
+		}
+	],
+	"volunteer": [],
+	"education": [
+		{
+			"institution": "University of Pune",
+			"area": "Computer Science",
+			"studyType": "Bachelor",
+			"startDate": "2009",
+			"endDate": "2014",
+			"gpa": "",
+			"courses": [
+				"Computer Networks",
+				"Data Structures",
+				"Operating System",
+				"Database Management"
+			]
+		}
+	],
+	"awards": [],
+	"publications": [],
+	"skills": [
+		{
+			"name": "Web Development",
+			"level": "",
+			"keywords": [
+				"HTML/CSS",
+				"Javascript - Angular, Backbone.js",
+				"Javascipt - Node",
+				"PHP - Zend, Code Ignitor",
+				"Ruby - Rails, Sinatra",
+				"Java - Spring",
+				"Go",
+				"API"
+			]
+		},
+		{
+			"name": "Projects",
+			"level": "",
+			"keywords": [
+				"Javascript - http://visualtrends.herokuapp.com/",
+				"Node.js - http://topsong.herokuapp.com/",
+				"Rails - http://hmc.herokuapp.com/fb-post.html"
+			]
+		}
+	],
+	"languages": [
+		{
+			"language": "English",
+			"fluency": "Business"
+		},
+		{
+			"language": "Japanese",
+			"fluency": "Beginner"
+		},
+		{
+			"language": "Hindi",
+			"fluency": "Native"
+		},
+		{
+			"language": "Marathi",
+			"fluency": "Native"
+		}
+	],
+	"interests": [
+		{
+			"name": "Reading",
+			"keywords": [
+				"Sociology",
+				"Physics"
+			]
+		},
+		{
+			"name": "Sports",
+			"keywords": [
+				"Basketball",
+				"Cricket"
+			]
+		}
+	],
+	"references": []
+}
