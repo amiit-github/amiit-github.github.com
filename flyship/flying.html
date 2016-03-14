@@ -11,7 +11,7 @@
   <div class="top-fold">
     <nav>
       <div class="logo">
-        <h1>Logo</h1>
+        <img src="/flyship/images/logo/flyship.png">
       </div>
       <div class="nav-links">
         <ul>
@@ -34,21 +34,23 @@
       <button class="howitworks medium ui button">
         <i class="settings icon"></i> How it works
       </button>
-      <div class="header-form">
+      <div class="header-form" id="header-form">
         <div class="ui left icon input">
-          <input type="text" placeholder="Airlines">
-          <i class="plane icon"></i>
+          <input type="text" placeholder="Departure City" data-content="Enter your departure city." data-variation="inverted">
+          <i class="marker icon"></i>
         </div>
         <div class="ui left icon input">
-          <input type="text" placeholder="Flight #">
-          <i class="caret right icon"></i>
+          <input type="text" placeholder="Arrival City" data-content="Enter your final arrival city." data-variation="inverted">
+          <i class="plane icon"></i>
         </div>
         <div class="ui left icon input">
           <input type="text" placeholder="Departure Date">
           <i class="calendar outline icon"></i>
-          <button class="ui medium button">
-            <i class="search icon"></i> Search Packages
-          </button>
+          <a href="/flyship/search-package.html#header-form">
+            <button class="ui medium button">
+              <i class="search icon"></i> Search Packages
+            </button>
+          </a>
         </div>
       </div>
     </div>
@@ -57,6 +59,11 @@
   </div>
   <script src="semantic/jquery-1.12.1.min.js"></script>
   <script src="semantic/semantic.min.js"></script>
+  <script type="text/javascript">
+  $('div.input input').popup({
+    on: 'focus'
+  });
+  </script>
 </body>
 
 </html>

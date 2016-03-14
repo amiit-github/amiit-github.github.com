@@ -4,6 +4,7 @@
 <head>
   <title>Flyship - Ask someone flying to your country</title>
   <link rel="stylesheet" type="text/css" href="semantic/semantic.min.css">
+  <link rel="stylesheet" type="text/css" href="semantic/components/popup.min.css">
   <link rel="stylesheet" type="text/css" href="css/custom.css">
 </head>
 
@@ -11,7 +12,7 @@
   <div class="top-fold">
     <nav>
       <div class="logo">
-        <h1>Logo</h1>
+        <img src="/flyship/images/logo/flyship.png">
       </div>
       <div class="nav-links">
         <ul>
@@ -34,20 +35,20 @@
       <button class="howitworks medium ui button">
         <i class="settings icon"></i> How it works
       </button>
-      <div class="header-form">
+      <div class="header-form" id="header-form">
         <div class="ui left icon input">
-          <input type="text" placeholder="Origin City">
+          <input type="text" placeholder="Origin City" data-content="Enter origin city of the package." data-variation="inverted">
           <i class="marker icon"></i>
         </div>
         <div class="ui left icon input">
-          <input type="text" placeholder="Destination City">
+          <input type="text" placeholder="Destination City" data-content="Enter destination city of the package." data-variation="inverted">
           <i class="plane icon"></i>
         </div>
         <div class="ui left icon input">
-          <input type="text" placeholder="Expected Date">
+          <input type="text" placeholder="Expected Date" data-content="Expected date of shipment." data-variation="inverted">
           <i class="calendar outline icon"></i>
           <button class="ui medium button">
-            <i class="search icon"></i> Search Flights
+            <i class="search icon"></i> Search travelers
           </button>
         </div>
       </div>
@@ -57,6 +58,11 @@
   </div>
   <script src="semantic/jquery-1.12.1.min.js"></script>
   <script src="semantic/semantic.min.js"></script>
+  <script type="text/javascript">
+  $('div.input input').popup({
+    on: 'focus'
+  });
+  </script>
 </body>
 
 </html>

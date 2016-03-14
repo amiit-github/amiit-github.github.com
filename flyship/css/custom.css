@@ -33,6 +33,11 @@ nav {
   float: left;
 }
 
+.logo img {
+  width: 175px;
+  height: 50px;
+}
+
 .nav-links {
   float: right;
   margin-right: 3%;
