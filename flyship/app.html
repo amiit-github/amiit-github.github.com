@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="App">
+
+<head>
+		<title>Flyship - Ask someone flying to your country</title>
+		<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="assets/semantic/semantic.min.css">
+		<link rel="stylesheet" type="text/css" href="assets/semantic/components/popup.min.css">
+		<link rel="stylesheet" type="text/css" href="assets/semantic/components/modal.min.css">
+		<link rel="stylesheet" type="text/css" href="assets/semantic/components/dropdown.min.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/custom.css">
+</head>
+
+<body ng-controller="FlyingCtrl" ng-view>
+		<script src="js/lib/jquery-1.12.1.min.js"></script>
+		<script src="assets/semantic/semantic.min.js"></script>
+		<script src="assets/semantic/components/modal.min.js"></script>
+		<script type="text/javascript" src="assets/semantic/components/dropdown.min.js"></script>
+		<script type="text/javascript" src="js/lib/angular.min.js"></script>
+		<script type="text/javascript" src="js/lib/angular-route.min.js"></script>
+		<script type="text/javascript" src="app/App.js"></script>
+		<script type="text/javascript" src="app/flyers/models/Trip.js"></script>
+		<script type="text/javascript" src="app/flyers/controllers/FlyingController.js"></script>
+		<script type="text/javascript" src="app/flyers/controllers/TripDetailsController.js"></script>
+		<script type="text/javascript" src="app/nonflyers/controllers/NonflyingController.js"></script>
+		<script type="text/javascript" src="app/signin/controllers/SigninController.js"></script>
+		<script type="text/javascript" src="app/signup/controllers/SignupController.js"></script>
+		<!-- Firebase -->
+		<script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+		<!-- AngularFire -->
+		<script src="https://cdn.firebase.com/libs/angularfire/1.1.4/angularfire.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<style type="text/css">
+form {
+    text-align: left;
+}
+
+.social {
+    margin-bottom: 10px;
+}
+</style>
+<div class="top-fold">
+    <nav>
+        <div class="logo">
+            <img src="assets/images/logo/flyship.png">
+        </div>
+        <div class="nav-links">
+            <ul>
+                <li>
+                    <div class="ui large buttons">
+                        <button class="ui button positive">Sign In
+                        </button>
+                        <div class="or"></div>
+                        <a href="#/signup">
+                            <button class="ui button">Sign Up</button>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="top-content">
+        <div class="ui two column middle aligned very relaxed stackable grid">
+            <div class="column">
+                <form class="ui form">
+                    <p>Sign In</p>
+                    <div class="field">
+                        <div class="ui left icon input">
+                            <input placeholder="Email address" type="text">
+                            <i class="mail icon"></i>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label>Password</label>
+                        <div class="ui left icon input">
+                            <input name="password" placeholder="Password" type="password">
+                            <i class="lock icon"></i>
+                        </div>
+                    </div>
+                    <div class="inline field">
+                        <div class="field">
+                            <div class="ui toggle checkbox">
+                                <input class="hidden" tabindex="0" name="gift" type="checkbox">
+                                <label>Remember me on this computer (<i class="help icon link" data-content="Automatically log me in next time when I visit this site." data-variation="inverted"></i>)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#/flyer">
+                        <div class="ui blue submit button">Submit</div>
+                    </a>
+                </form>
+            </div>
+            <div class="ui vertical divider center">Or</div>
+            <div class="center aligned column">
+                <div class="social">
+                    <button class="ui twitter button">
+                        <i class="twitter icon"></i> Continue with Twitter
+                    </button>
+                </div>
+                <div class="social">
+                    <button class="ui facebook button">
+                        <i class="facebook icon"></i> Continue with Facebook
+                    </button>
+                </div>
+                <div class="social">
+                    <button class="ui google plus button">
+                        <i class="google plus icon"></i> Continue with Google Plus
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+    $('div.input input').popup({
+        on: 'focus'
+    });
+    $('.ui.checkbox').checkbox();
+    $('.help').popup();
+    </script>

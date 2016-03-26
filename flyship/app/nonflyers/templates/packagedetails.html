@@ -1,0 +1,69 @@
+<div class="top-fold">
+    <nav>
+        <div class="logo">
+            <img src="assets/images/logo/flyship.png">
+        </div>
+        <div class="nav-links">
+            <div class="ui hidden divider"></div>
+            <div class="ui floating dropdown button">
+                <i class="user icon"></i>
+                <div class="text">Amit Shinde</div>
+                <i class="dropdown icon"></i>
+                <div class="menu">
+                    <a class="item" href="#/"><i class="user icon"></i> Account</a>
+                    <a class="item" href="#/"><i class="suitcase icon"></i> Saved Packages</a>
+                    <a class="item" href="#/"><i class="power icon"></i> Sign Out </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div style="margin:10% 20%;">
+        <form class="ui form">
+            <h4 class="ui dividing header">Package Details</h4>
+            <div class="two fields">
+                <div class="ui field left icon input">
+                    <input type="text" placeholder="Origin City of the package" data-content="Enter origin city of the package." data-variation="inverted">
+                    <i class="marker icon"></i>
+                </div>
+                <div class="ui field left icon input">
+                    <input type="text" placeholder="Contact Number of Origin City" data-content="Enter contact number for this address." data-variation="inverted">
+                    <i class="mobile icon"></i>
+                </div>
+            </div>
+            <div class="two fields">
+                <div class="ui field left icon input">
+                    <input type="text" placeholder="Destination City of the package" data-content="Enter destination city of the package." data-variation="inverted">
+                    <i class="plane icon"></i>
+                </div>
+                <div class="ui field left icon input">
+                    <input type="text" placeholder="Contact Number of Destination City" data-content="Enter contact number for this address." data-variation="inverted">
+                    <i class="mobile icon"></i>
+                </div>
+            </div>
+            <div class="field">
+                <label>Package Content</label>
+                <select class="ui fluid search dropdown" multiple="">
+                    <option value="">Select</option>
+                    <option value="PAPER">Books/Documents</option>
+                    <option value="ELCTRX">Electronics</option>
+                    <option value="MEDS">Medicines</option>
+                    <option value="OTHR">Other</option>
+                </select>
+            </div>
+            <div class="field">
+                <label>Expected Date</label>
+                <div class="ui left icon input">
+                    <input type="text" placeholder="Expected Date" data-content="Expected date of shipment." data-variation="inverted">
+                    <i class="calendar outline icon"></i>
+                </div>
+            </div>
+            <button class="ui button positive" type="submit">Save this package</button>
+        </form>
+    </div>
+</div>
+<script type="text/javascript">
+$('div.input input').popup({
+    on: 'focus'
+});
+$('.dropdown').dropdown();
+</script>

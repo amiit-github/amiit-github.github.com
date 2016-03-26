@@ -1,0 +1,122 @@
+<style type="text/css">
+	.ui.cards.search-results {
+		margin-left: 1%;
+	}
+</style>
+<div class="top-fold">
+	<nav>
+		<div class="logo">
+			<img src="assets/images/logo/flyship.png">
+		</div>
+		<div class="nav-links">
+			<div class="ui hidden divider"></div>
+			<div class="ui floating dropdown button">
+				<i class="user icon"></i>
+				<div class="text">Amit Shinde</div>
+				<i class="dropdown icon"></i>
+				<div class="menu">
+					<a class="item" href="#/"><i class="user icon"></i> Account</a>
+					<a class="item" href="#/"><i class="plane icon"></i> Saved Trips</a>
+					<a class="item" href="#/"><i class="power icon"></i> Sign Out </a>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<div style="margin:10% 20%;">
+		<div class="ui positive message" ng-show="trip_details.saveSuccess">
+			<p>Trip details saved. See in <a><b>My Packages</b></a></p>
+		</div>
+		<div class="ui negative message" ng-show="trip_details.saveError">
+			<p>There was some problem saving this trip. Please try again.</p>
+		</div>
+		<form class="ui form">
+			<h4 class="ui dividing header">Trip Details</h4>
+			<div class="three fields">
+				<div class="ui field left icon input">
+					<input type="text" placeholder="Origin City" data-content="Enter origin city of your trip." data-variation="inverted" ng-model="trip_details.trip.origin_city">
+					<i class="marker icon"></i>
+				</div>
+				<div class="ui field left icon input">
+					<input type="text" placeholder="Contact Number of Origin City" data-content="Enter contact number for this address." data-variation="inverted" ng-model="trip_details.trip.origin_contact">
+					<i class="mobile icon"></i>
+				</div>
+				<div class="ui field left icon input">
+					<input type="text" placeholder="Departure Date" data-content="Departure date" data-variation="inverted" ng-model="trip_details.trip.origin_departure">
+					<i class="calendar outline icon"></i>
+				</div>
+			</div>
+			<div class="three fields">
+				<div class="ui field left icon input">
+					<input type="text" placeholder="Destination City" data-content="Enter destination city of your trip." data-variation="inverted" ng-model="trip_details.trip.destination_city">
+					<i class="plane icon"></i>
+				</div>
+				<div class="ui field left icon input">
+					<input type="text" placeholder="Contact Number of Destination City" data-content="Enter contact number for this address." data-variation="inverted" ng-model="trip_details.trip.destination_contact">
+					<i class="mobile icon"></i>
+				</div>
+				<div class="ui field left icon input">
+					<input type="text" placeholder="Arrival Date" data-content="Arrival date." data-variation="inverted" ng-model="trip_details.trip.destination_arrival">
+					<i class="calendar outline icon"></i>
+				</div>
+			</div>
+			<div class="field">
+				<label>Package Preferences</label>
+				<select class="ui fluid search dropdown" multiple="">
+					<option value="">Select</option>
+					<option value="PAPER">Books/Documents</option>
+					<option value="ELCTRX">Electronics</option>
+					<option value="MEDS">Medicines</option>
+					<option value="ALL">All of above is OK</option>
+				</select>
+			</div>
+			<button class="ui button positive" type="submit" ng-click="trip_details.saveTrip()">Save this trip</button>
+		</form>
+	</div>
+</div>
+<div class="bottom-fold">
+	<h1>Your trips</h1>
+	<div class="ui special cards search-results">
+		<div class="card" ng-repeat="(id, trip) in trip_details.trips">
+			<div class="content">
+				<div class="header">{{trip.origin_city}} TO {{trip.destination_city}}</div>
+			</div>
+			<div class="content">
+				<h4 class="ui sub header">Details</h4>
+				<div class="ui small feed">
+					<div class="event">
+						<div class="content">
+							<div class="summary">
+								Departure from {{trip.origin_city}} : <b>{{trip.departure_date}}</b>
+							</div>
+						</div>
+					</div>
+					<div class="event">
+						<div class="content">
+							<div class="summary">
+								Arrival at {{trip.destination_city}} : <b>{{trip.arrival_date}}</b>
+							</div>
+						</div>
+					</div>
+					<div class="event">
+						<div class="content">
+							<div class="summary">
+								Package Preferences :
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="extra content">
+				<button class="ui button" ng-click="trip_details.removeTrip(id)">Delete</button>
+			</div>
+		</div>
+	</div>
+
+</div>
+<script type="text/javascript">
+	$('div.input input').popup({
+		on: 'focus'
+	});
+	$('.dropdown').dropdown();
+
+</script>
