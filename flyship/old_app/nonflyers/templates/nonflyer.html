@@ -1,0 +1,187 @@
+<style type="text/css">
+	.social {
+		margin-bottom: 10px;
+	}
+
+	.social button {
+		width: 300px;
+	}
+
+	.ui.submit {
+		margin-top: 15px;
+	}
+
+	.ui.segment {
+		border: 0px;
+	}
+
+</style>
+<div class="top-fold">
+	<nav>
+		<div class="logo">
+			<img src="assets/images/logo/flyship.png">
+		</div>
+		<div class="nav-links">
+			<ul>
+				<li><a id="signin">Sign In</a></li>
+				<li>
+					<div class="ui large buttons">
+						<a href="#/flyer">
+							<button class="ui button">I'm flying</button>
+						</a>
+						<div class="or"></div>
+						<button class="ui button active">I have a package
+						</button>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<div class="top-content">
+		<h4>Ask someone flying to your country to deliver your package.</h4>
+		<button class="howitworks medium ui button">
+			<i class="settings icon"></i> How it works
+		</button>
+		<div class="header-form" id="header-form">
+			<div class="ui left icon input">
+				<input type="text" placeholder="Origin City" data-content="Enter origin city of the package." data-variation="inverted">
+				<i class="marker icon"></i>
+			</div>
+			<div class="ui left icon input">
+				<input type="text" placeholder="Destination City" data-content="Enter destination city of the package." data-variation="inverted">
+				<i class="plane icon"></i>
+			</div>
+			<div class="ui left icon input">
+				<input type="text" placeholder="Expected Date" data-content="Expected date of shipment." data-variation="inverted">
+				<i class="calendar outline icon"></i>
+				<button class="ui button positive">
+					<i class="search icon"></i> Search travelers
+				</button>
+			</div>
+		</div>
+		<div class="ui compact message" style="margin-top:200px;">
+			<div class="header">
+				<div class="content">
+					Sorry there are no travelers registered for this route. But we can notify you whenever there is.
+				</div>
+				<p>
+					<a href="#/packagedetails">
+						<button class="ui green basic button">Great ! Notify me.</button>
+					</a>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="botton-fold">
+</div>
+<div class="ui modal small" style="width:400px;">
+	<div class="content" style="text-align:center;">
+		<div class="social">
+			<button class="ui twitter button">
+				<i class="twitter icon"></i> Sign In with Twitter
+			</button>
+		</div>
+		<div class="social">
+			<button class="ui facebook button">
+				<i class="facebook icon"></i> Sign In with Facebook
+			</button>
+		</div>
+		<div class="social">
+			<button class="ui google plus button">
+				<i class="google plus icon"></i> Sign In with Google Plus
+			</button>
+		</div>
+	</div>
+	<div class="ui horizontal divider">
+		Or
+	</div>
+	<div class="content">
+		<div class="ui pointing secondary menu">
+			<a class="active item" data-tab="first">Signin</a>
+			<a class="item" data-tab="second">Signup</a>
+		</div>
+		<div class="ui active tab segment" data-tab="first">
+			<form class="ui form">
+				<div class="field">
+					<div class="ui left icon input">
+						<input placeholder="Email address" type="text">
+						<i class="mail icon"></i>
+					</div>
+				</div>
+				<div class="field">
+					<div class="ui left icon input">
+						<input name="password" placeholder="Password" type="password">
+						<i class="lock icon"></i>
+					</div>
+				</div>
+				<div class="inline field">
+					<div class="field">
+						<div class="ui toggle checkbox">
+							<input class="hidden" tabindex="0" name="gift" type="checkbox">
+							<label>Remember me on this computer (<i class="help icon link" data-content="Automatically log me in next time when I visit this site." data-variation="inverted"></i>)</label>
+						</div>
+					</div>
+				</div>
+				<a href="#/flyer">
+					<div class="ui submit button positive">Submit</div>
+				</a>
+			</form>
+		</div>
+		<div class="ui tab segment" data-tab="second">
+			<form class="ui form">
+				<p>Tell us about yourself</p>
+				<div class="two fields">
+					<div class="field">
+						<div class="ui left icon input">
+							<input placeholder="First Name" type="text">
+							<i class="user icon"></i>
+						</div>
+					</div>
+					<div class="field">
+						<div class="ui input">
+							<input placeholder="Last Name" type="text">
+						</div>
+					</div>
+				</div>
+				<div class="field">
+					<div class="ui left icon input">
+						<input placeholder="Email address" type="text">
+						<i class="mail icon"></i>
+					</div>
+				</div>
+				<div class="field">
+					<div class="ui left icon input">
+						<input name="password" placeholder="Password" type="password">
+						<i class="lock icon"></i>
+					</div>
+				</div>
+				<div class="inline field">
+					<div class="field">
+						<div class="ui checkbox">
+							<input class="hidden" tabindex="0" type="checkbox" checked="checked">
+							<label>I agree to the Terms and Conditions</label>
+						</div>
+					</div>
+				</div>
+				<a href="#/flyer">
+					<div class="ui submit button positive">Submit</div>
+				</a>
+			</form>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	$('#signin').click(function() {
+		console.log("Hiii");
+		$('.ui.modal').modal('show');
+	});
+	$('.menu .item').tab();
+	$('.ui.checkbox').checkbox();
+
+
+	$('div.input input').popup({
+		on: 'focus'
+	});
+
+</script>

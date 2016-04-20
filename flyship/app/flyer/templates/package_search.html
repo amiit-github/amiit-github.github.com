@@ -1,0 +1,125 @@
+<style media="screen">
+	hr {
+		margin-top: 1rem;
+	}
+
+	.departure-form > input[type="text"] {
+		width: 355px;
+	}
+
+	label {}
+
+	input.wide {
+		width: 455px;
+	}
+
+	p.help_msg {
+		font-size: 12px;
+		color: grey;
+	}
+
+	div.form-submit-button {
+		float: right;
+	}
+
+	.form-submit-button button {
+		border-radius: 100px;
+		margin-left: 10px;
+	}
+
+	button.fade {
+		color: #bbb;
+	}
+
+	button.special {
+		color: #33C3F0;
+		border-color: #33C3F0;
+	}
+
+	span.label-body {
+		font-size: 1.8rem;
+		line-height: 1.5;
+		letter-spacing: -.05rem;
+	}
+
+	.container {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 700px;
+	}
+
+	.search-terms {
+		text-align: center;
+	}
+
+	.search-terms input[type="text"] {
+		font-size: 20px;
+		border: none;
+		border-bottom: 1px solid #E1E1E1;
+	}
+
+	.search-results {
+		margin-top: 2%;
+	}
+
+	.search-card {
+		box-shadow: 0 1px 4px -2px gray;
+		margin-top: 1%;
+		width: inherit;
+		border: 1px solid #E1E1E1;
+		padding: 20px;
+	}
+
+	.meta-info li {
+		display: inline;
+		font-size: 13px;
+	}
+
+	.register_with_us {
+		margin-top: 5%;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+	}
+
+</style>
+<nav>
+	<div class="nav">
+		<a href="#">flyship</a>
+		<div class="nav-links">
+			<!-- <a href="#">Log in</a>
+						<a class="button" href="/flyship/nonflyer.html">I have a package</a> -->
+		</div>
+		<a href="#"></a>
+	</div>
+</nav>
+<!-- Primary Page Layout
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<div class="container">
+	<div class="search-terms">
+		<input type="text" name="name" value="" placeholder="Departure city">
+		<input type="text" name="name" value="" placeholder="Arrival city">
+		<input type="text" name="name" value="" placeholder="Departure date">
+	</div>
+	<hr style="border-color:#33C3F0">
+	<div class="search-results">
+		<div class="search-card">
+			<label>Medical documents</label>
+			<ul class="meta-info">
+				<li>weighs less than 10gm</li>
+			</ul>
+			<span></span>
+		</div>
+	</div>
+	<div class="register_with_us">
+		<p style="margin-bottom:10px; color:#bbb;">
+			Cannot find relevant package? Register your trip with us and we will notify you.
+		</p>
+		<a href="#/departure">
+			<button class="special" type="button" name="button">Register trip</button>
+		</a>
+	</div>
+
+</div>
+<!-- End Document
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->

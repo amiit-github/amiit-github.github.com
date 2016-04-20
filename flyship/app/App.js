@@ -1,51 +1,57 @@
-var flyshipModule = angular.module('App', [
-	'ngRoute',
-	// 'ngMessages',
-	// 'auth0',
-	// 'angular-jwt',
-	// 'angular-storage',
-	'firebase'
-]);
-flyshipModule.constant('FIREBASE_URI', 'https://flyship.firebaseio.com')
+var flyshipModule = angular.module('Flyship', [
+		'ngRoute',
+		// 'ngMessages',
+		// 'auth0',
+		// 'angular-jwt',
+		// 'angular-storage',
+	])
+	.config(['$httpProvider', function($httpProvider) {
+		$httpProvider.defaults.useXDomain = true;
+		delete $httpProvider.defaults.headers.common['X-Requested-With'];
+	}]);
+
+flyshipModule.constant('API_HOST', 'http://flyship.herokuapp.com')
 
 flyshipModule.config(function($routeProvider) {
 	$routeProvider
-		.when('/', {
-			templateUrl: 'app/flyers/templates/flying.html',
-			controller: 'FlyingCtrl',
-			controllerAs: 'flying'
-		})
-		.when('/signup', {
-			templateUrl: 'app/signup/templates/signup.html',
-			controller: 'SignupCtrl',
-			controllerAs: 'signup'
-		})
-		.when('/signin', {
-			templateUrl: 'app/signin/templates/signin.html',
-			controller: 'SigninCtrl',
-			controllerAs: 'signin'
-		})
 		.when('/flyer', {
-			templateUrl: 'app/flyers/templates/flying.html',
-			controller: 'FlyingCtrl',
-			controllerAs: 'flying'
+			templateUrl: 'app/flyer/templates/flyer.html',
+			controller: 'FlyerCtrl',
+			controllerAs: 'flyer'
 		})
-		.when('/tripdetails', {
-			templateUrl: 'app/flyers/templates/tripdetails.html',
-			controller: 'TripDetailsCtrl',
-			controllerAs: 'trip_details'
+		.when('/packagesearch', {
+			templateUrl: 'app/flyer/templates/package_search.html',
+			controller: 'FlyerCtrl',
+			controllerAs: 'flyer'
 		})
-		.when('/nonflyer', {
-			templateUrl: 'app/nonflyers/templates/nonflyer.html',
-			controller: 'NonflyingCtrl',
-			controllerAs: 'nonflying'
+		.when('/departure', {
+			templateUrl: 'app/flyer/templates/departure_form.html',
+			controller: 'FlyerCtrl',
+			controllerAs: 'flyer'
 		})
-		.when('/packagedetails', {
-			templateUrl: 'app/nonflyers/templates/packagedetails.html',
-			controller: 'NonflyingCtrl',
-			controllerAs: 'nonflying'
+		.when('/arrival', {
+			templateUrl: 'app/flyer/templates/arrival_form.html',
+			controller: 'FlyerCtrl',
+			controllerAs: 'flyer'
 		})
-		.otherwise({
-			redirectTo: '/'
-		});
+		.when('/preferences', {
+			templateUrl: 'app/flyer/templates/package_preference.html',
+			controller: 'FlyerCtrl',
+			controllerAs: 'flyer'
+		})
+
+	.when('/nonflyer', {
+			templateUrl: 'app/nonflyer/templates/nonflyer.html',
+			controller: 'NonflyerCtrl',
+			controllerAs: 'nonflyer'
+		})
+		.when('/registerpackage', {
+			templateUrl: 'app/nonflyer/templates/register_package.html',
+			controller: 'NonflyerCtrl',
+			controllerAs: 'nonflyer'
+		})
+
+	.otherwise({
+		redirectTo: '/flyer'
+	});
 });
